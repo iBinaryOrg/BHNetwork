@@ -12,8 +12,9 @@ Pod::Spec.new do |s|
   s.public_header_files = 'BHNetwork/BHNetwork.h'
   s.source_files = 'BHNetwork/BHNetwork.h'
 
-  s.subspec 'BHNetworkLogger' do |ss|
-    ss.source_files = 'BHNetwork/BHLogger/*.{h,m}'
+  s.subspec 'BHNetworkConfig' do |ss|
+    ss.source_files = 'BHNetwork/BHNetworkConfig/*.{h,m}'
+    ss.dependency 'BHNetwork/BHNetworkRequest'
   end
 
   s.subspec 'BHNetworkProtocol' do |ss|
@@ -23,6 +24,7 @@ Pod::Spec.new do |s|
   s.subspec 'BHNetworkResponse' do |ss|
     ss.source_files = 'BHNetwork/BHNetworkResponse/*.{h,m}'
     ss.dependency 'BHNetwork/BHNetworkProtocol'
+    ss.dependency 'BHNetwork/BHNetworkConfig'
   end
 
   s.subspec 'BHNetworkRequest' do |ss|
