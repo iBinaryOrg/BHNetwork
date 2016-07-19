@@ -24,6 +24,7 @@
 		19818F791D268E870072E29E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19818F781D268E870072E29E /* Default-568h@2x.png */; };
 		19818F911D2690FC0072E29E /* BHNetworkHUDAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 19818F901D2690FC0072E29E /* BHNetworkHUDAccessory.m */; };
 		19818F941D26911A0072E29E /* BHNetworkRefreshAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 19818F931D26911A0072E29E /* BHNetworkRefreshAccessory.m */; };
+		7D0D7EB482331524BF4DEC6A /* libPods-BHNetworkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42351E5BED9CD5F6EA5F80C6 /* libPods-BHNetworkDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,9 @@
 		19818F981D2692AF0072E29E /* BHNetworkInterceptorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHNetworkInterceptorProtocol.h; sourceTree = "<group>"; };
 		19818F991D2693550072E29E /* BHNetworkRequestParamSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHNetworkRequestParamSourceProtocol.h; sourceTree = "<group>"; };
 		19818FA61D26959A0072E29E /* BHNetworkResponseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHNetworkResponseProtocol.h; sourceTree = "<group>"; };
+		21F7D9BBDC38A15F1D80F1AE /* Pods-BHNetworkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BHNetworkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BHNetworkDemo/Pods-BHNetworkDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		42351E5BED9CD5F6EA5F80C6 /* libPods-BHNetworkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BHNetworkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F5FB25891392264CE69636 /* Pods-BHNetworkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BHNetworkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BHNetworkDemo/Pods-BHNetworkDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0D7EB482331524BF4DEC6A /* libPods-BHNetworkDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +136,8 @@
 				19818F511D268E220072E29E /* BHNetworkDemo */,
 				19818F6B1D268E220072E29E /* BHNetworkDemoTests */,
 				19818F501D268E220072E29E /* Products */,
+				F7779E18F92E256AE2919251 /* Pods */,
+				BFC0F036D40F42FEC785446A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,9 +153,9 @@
 		19818F511D268E220072E29E /* BHNetworkDemo */ = {
 			isa = PBXGroup;
 			children = (
+				19818F8E1D2690EE0072E29E /* BHNetworkAccessory */,
 				19818F551D268E220072E29E /* AppDelegate.h */,
 				19818F561D268E220072E29E /* AppDelegate.m */,
-				19818F8E1D2690EE0072E29E /* BHNetworkAccessory */,
 				19818F581D268E220072E29E /* ViewController.h */,
 				19818F591D268E220072E29E /* ViewController.m */,
 				19818F5B1D268E220072E29E /* Main.storyboard */,
@@ -211,6 +218,23 @@
 			path = BHNetworkAccessory;
 			sourceTree = "<group>";
 		};
+		BFC0F036D40F42FEC785446A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42351E5BED9CD5F6EA5F80C6 /* libPods-BHNetworkDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7779E18F92E256AE2919251 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21F7D9BBDC38A15F1D80F1AE /* Pods-BHNetworkDemo.debug.xcconfig */,
+				A4F5FB25891392264CE69636 /* Pods-BHNetworkDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19818F711D268E220072E29E /* Build configuration list for PBXNativeTarget "BHNetworkDemo" */;
 			buildPhases = (
+				1B74BBE624A2DAA89D5ED0EE /* [CP] Check Pods Manifest.lock */,
 				19818F4B1D268E220072E29E /* Sources */,
 				19818F4C1D268E220072E29E /* Frameworks */,
 				19818F4D1D268E220072E29E /* Resources */,
+				D416E2CC7CAA23917BEEE2FE /* [CP] Embed Pods Frameworks */,
+				33B15989A12F92CC6728BF8B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,6 +334,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B74BBE624A2DAA89D5ED0EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33B15989A12F92CC6728BF8B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BHNetworkDemo/Pods-BHNetworkDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D416E2CC7CAA23917BEEE2FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BHNetworkDemo/Pods-BHNetworkDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19818F4B1D268E220072E29E /* Sources */ = {
@@ -452,6 +527,7 @@
 		};
 		19818F721D268E220072E29E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21F7D9BBDC38A15F1D80F1AE /* Pods-BHNetworkDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -465,6 +541,7 @@
 		};
 		19818F731D268E220072E29E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4F5FB25891392264CE69636 /* Pods-BHNetworkDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
